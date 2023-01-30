@@ -1,4 +1,6 @@
 import { Component } from "react";
+import CustomerList from "../../components/customerlist/CustomerList";
+import SearchBox from "../../components/searchbox/SearchBox";
 
 class Customer extends Component {
   constructor() {
@@ -43,14 +45,19 @@ class Customer extends Component {
     return (
       <div>
         <h1>Customer</h1>
-        <input
+        {/* <input
           type="search"
           className="search-box"
           placeholder="search customers"
           onChange={onSearchChange}
+        /> */}
+        <SearchBox
+          onChangeHandler={onSearchChange}
+          placeHolder="Search Customers"
+          className="search-box"
         />
 
-        {filteredCustomers.map((Customer) => {
+        {/* {filteredCustomers.map((Customer) => {
           return (
             <div key={Customer.email}>
               <h2>
@@ -59,7 +66,8 @@ class Customer extends Component {
               </h2>
             </div>
           );
-        })}
+        })} */}
+        <CustomerList customers={filteredCustomers} />
       </div>
     );
   }
