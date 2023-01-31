@@ -1,4 +1,4 @@
-# Boo!camp Spot
+# My Demo
 
 *View Haunted Places from around the world!*
 
