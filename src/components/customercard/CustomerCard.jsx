@@ -3,7 +3,8 @@ import "./CustomerCard.css";
 
 class CustomerCard extends Component {
   render() {
-    const { name, email } = this.props;
+    const { name, email } = this.props.customer;
+
     return (
       <div className="card">
         <img
