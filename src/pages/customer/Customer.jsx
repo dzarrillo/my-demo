@@ -1,6 +1,7 @@
 import { Component } from "react";
 import CustomerList from "../../components/customerlist/CustomerList";
 import SearchBox from "../../components/searchbox/SearchBox";
+import "./Customer.css";
 
 class Customer extends Component {
   constructor() {
@@ -44,7 +45,7 @@ class Customer extends Component {
 
     return (
       <div>
-        <h1>Customer</h1>
+        <h1 className="title">My Customer List</h1>
         {/* <input
           type="search"
           className="search-box"

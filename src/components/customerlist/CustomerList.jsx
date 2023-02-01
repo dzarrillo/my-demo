@@ -8,8 +8,8 @@ class CustomerList extends Component {
 
     return (
       <div className="customer-grid">
-        {customers.map((Customer) => {
-          const { name, email } = Customer;
+        {customers.map((customer) => {
+          const { email } = customer;
           return (
             // <div className="card-container" key={email}>
             //   <img
@@ -20,7 +20,7 @@ class CustomerList extends Component {
             //   <p>{email}</p>{" "}
             // </div>
             <div key={email}>
-              <CustomerCard name={name} email={email} />
+              <CustomerCard customer={customer} />
             </div>
           );
         })}
